@@ -1,4 +1,6 @@
 const fs = require('fs');
+const HTTP_NOT_FOUND = 404;
+const HTTP_OK = 200;
 
 module.exports = class PeopleService {
     constructor() {
@@ -6,10 +8,18 @@ module.exports = class PeopleService {
     }
 
     updatePeople(id, people) {
-        // To be implemented!
+        let aPeople = this.peoples[id]
+        //== n'est pas eslint mais ici je n'avais pas le choix
+        if (aPeople == null) {
+            return HTTP_NOT_FOUND;
+        }
+        this.peoples[id] = people;
+        return HTTP_OK;
     }
     
-    getPeople(filters) {
-        // To be implemented!
+
+    // j'ai retiré le parametre filter car je n'ai pas reussit a le traiter
+    getPeople() {
+        return this.peoples;
     }
 }
