@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:rest":"node ./api/index.js",
+    "start:websocket":"node ./websocket/public/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "eslint:init": "./node_modules/.bin/eslint --init",
