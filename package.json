@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
+    "eslint:init": "./node_modules/.bin/eslint --init",
     "eslint": "./node_modules/.bin/eslint \"./**/*.js\""
   },
   "author": "",
